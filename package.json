@@ -1,0 +1,6 @@
+{
+  "name": "exception",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Library to provide errors with causes"
+}
