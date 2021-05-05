@@ -1,6 +1,6 @@
 {
   "name": "exceptions-with-cause",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Library to provide errors with causes",
   "type": "module",
   "exports": {
