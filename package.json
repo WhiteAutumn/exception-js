@@ -23,6 +23,11 @@
       }
     }
   },
+  "files": [
+    "package.json",
+    "package-lock.json",
+    "dist"
+  ],
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
