@@ -4,11 +4,11 @@
   "description": "Library to provide errors with causes",
   "type": "module",
   "exports": {
-    "require": "./dist/index.cjs",
-    "import": "./index.mjs"
+    "require": "./dist/cjs/index.c.js",
+    "import": "./dist/mjs/index.m.js"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=12.20.0"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,11 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "mocha .",
-    "test:watch": "mocha --watch --reporter min ."
+    "test:watch": "mocha --watch --reporter min .",
+    "build": "run-p build:*",
+    "build:require": "tsc --project tsconfig.require.json",
+    "build:modules": "tsc --project tsconfig.modules.json",
+    "prepack": "npm run build"
   },
   "devDependencies": {
     "@types/chai": "^4.0.0",
@@ -30,6 +34,7 @@
     "esbuild-runner": "^2.0.0",
     "eslint": "^8.0.0",
     "mocha": "^10.0.0",
+    "npm-run-all": "^4.1.5",
     "pre-commit": "^1.0.0",
     "typescript": "~4.7.0"
   },

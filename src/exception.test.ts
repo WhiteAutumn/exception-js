@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import Exception from './index.mjs';
+import Exception from './exception';
 
 describe('The exceptions-with-cause package', () => {
 
