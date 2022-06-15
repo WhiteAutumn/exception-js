@@ -28,7 +28,7 @@ Error: Request failed because of error in "performTask": Cannot convert undefine
     at main (/Users/user/project/index.js:13:11)
     at Object.<anonymous> (/Users/user/project/index.js:17:1)
 ```
-With this we can quickly see the program was trying to make a request when it was calling `performTask`, however we lose the stacktrace from before making it much harder to find the actual cause of the error.
+With this we can quickly see the program was trying to make a request when it was calling `performTask`, however we lose the stack trace from before making it much harder to find the actual cause of the error.
 
 With the `exceptions-with-cause` package we can get the best of both worlds by attaching a cause to our error:
 ```
