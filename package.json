@@ -1,6 +1,6 @@
 {
   "name": "exceptions-with-cause",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Library to provide errors with causes",
   "type": "module",
   "exports": {
@@ -14,12 +14,6 @@
     "type": "git",
     "url": "https://github.com/WhiteAutumn/exceptions-with-cause.git"
   },
-  "scripts": {
-    "build": "babel index.mjs --out-file dist/index.cjs"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.13.16",
-    "@babel/core": "^7.13.16",
-    "@babel/plugin-transform-modules-commonjs": "^7.13.8"
-  }
+  "scripts": {},
+  "devDependencies": {}
 }
