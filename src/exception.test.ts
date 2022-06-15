@@ -40,10 +40,4 @@ describe('The exceptions-with-cause package', () => {
 		expect(exception).to.have.property('stack').match(/(?:.+:.+\r?\n)(?:\s+at .+\r?\n)+Caused by: (?:.+:.+\r?\n)(?:\s+at .+\r?\n)+/);
 	});
 
-	it('should have the correct cause property', () => {
-		const cause = new Error('Actual error');
-		const exception = new Exception('Error', cause);
-		expect(exception).to.have.property(Symbol.for('exceptions-with-cause/cause')).equal(cause);
-	});
-
 });
