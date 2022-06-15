@@ -1,0 +1,3 @@
+require: [esbuild-runner/register]
+spec: src/**/*.test.ts
+watch-files: [src/**/*.ts, src/**/*.mts]
