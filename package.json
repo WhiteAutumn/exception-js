@@ -17,6 +17,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "lint:strict": "eslint . --max-warnings=0",
     "test": "mocha .",
     "test:watch": "mocha --watch --reporter min .",
     "build": "run-p build:*",
