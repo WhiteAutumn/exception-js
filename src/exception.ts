@@ -1,11 +1,12 @@
+const CAUSE = Symbol.for('exceptions-with-cause/cause');
 
 export default class Exception <Cause> extends Error {
-	public readonly cause?: Cause;
+	public readonly [CAUSE]?: Cause;
 
 	constructor(message?: string, cause?: Cause) {
 		super(message);
 		this.name = 'Exception';
-		this.cause = cause;
+		this[CAUSE] = cause;
 
 		if (this.stack != null && cause != null) {
 			this.stack += '\nCaused by: ';

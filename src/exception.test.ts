@@ -43,7 +43,7 @@ describe('The exceptions-with-cause package', () => {
 	it('should have the correct cause property', () => {
 		const cause = new Error('Actual error');
 		const exception = new Exception('Error', cause);
-		expect(exception).to.have.property('cause').equal(cause);
+		expect(exception).to.have.property(Symbol.for('exceptions-with-cause/cause')).equal(cause);
 	});
 
 });
