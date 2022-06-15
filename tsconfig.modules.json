@@ -1,8 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "module": "ESNext",
-    "outDir": "./dist/mjs"
-  },
-  "exclude": ["src/index.c.ts", "**/*.test.*", "node_modules", "dist"]
-}

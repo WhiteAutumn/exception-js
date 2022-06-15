@@ -2,17 +2,26 @@
   "name": "exceptions-with-cause",
   "version": "2.0.0",
   "description": "Library to provide errors with causes",
-  "type": "module",
-  "exports": {
-    "require": "./dist/cjs/index.c.js",
-    "import": "./dist/mjs/index.m.js"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WhiteAutumn/exceptions-with-cause.git"
   },
   "engines": {
     "node": ">=12.20.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/WhiteAutumn/exceptions-with-cause.git"
+  "main": "./dist/cjs/cjs/index.js",
+  "module": "./dist/mjs/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/mjs/mjs/index.d.ts",
+        "default": "./dist/mjs/mjs/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/cjs/index.d.ts",
+        "default": "./dist/cjs/cjs/index.js"
+      }
+    }
   },
   "scripts": {
     "lint": "eslint .",
@@ -21,13 +30,15 @@
     "test": "mocha .",
     "test:watch": "mocha --watch --reporter min .",
     "build": "run-p build:*",
-    "build:require": "tsc --project tsconfig.require.json",
-    "build:modules": "tsc --project tsconfig.modules.json",
+    "build:require": "tsc --project tsconfig.commonjs.json",
+    "build:modules": "tsc --project tsconfig.esm.json",
+    "postbuild": "node ./scripts/postbuild.mjs",
     "prepack": "npm run build"
   },
   "devDependencies": {
     "@types/chai": "^4.0.0",
     "@types/mocha": "^9.0.0",
+    "@types/node": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "chai": "^4.0.0",
