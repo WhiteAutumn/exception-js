@@ -16,6 +16,9 @@
   "engines": {
     "node": ">=12.20.0"
   },
+  "files": [
+    "dist"
+  ],
   "main": "./dist/cjs/cjs/index.js",
   "module": "./dist/mjs/mjs/index.js",
   "exports": {
@@ -30,11 +33,6 @@
       }
     }
   },
-  "files": [
-    "package.json",
-    "package-lock.json",
-    "dist"
-  ],
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
