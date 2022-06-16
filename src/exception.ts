@@ -1,5 +1,5 @@
-export default class Exception <Cause> extends Error {
-	constructor(message?: string, cause?: Cause) {
+export default class Exception extends Error {
+	constructor(message?: string, cause?: Error | unknown) {
 		super(message);
 		this.name = 'Exception';
 
