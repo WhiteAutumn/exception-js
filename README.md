@@ -1,3 +1,4 @@
+[![npm](https://img.shields.io/npm/v/exceptions-with-cause?style=for-the-badge)](https://www.npmjs.com/package/exceptions-with-cause) ![npm type definitions](https://img.shields.io/npm/types/exceptions-with-cause?style=for-the-badge)
 # `exceptions-with-cause`
 
 ## What?
