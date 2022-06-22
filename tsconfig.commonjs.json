@@ -4,5 +4,5 @@
     "module": "commonjs",
     "outDir": "dist/cjs"
   },
-  "exclude": ["src/mjs/**/*", "src/**/*.test.*", "node_modules", "dist"]
+  "exclude": ["src/index.m.ts", "src/**/*.test.*", "node_modules", "dist"]
 }
