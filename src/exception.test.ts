@@ -40,6 +40,12 @@ describe('The exceptions-with-cause package', () => {
 		expect(exception).to.have.property('stack').match(/(?:.+:.+\r?\n)(?:\s+at .+\r?\n)+Caused by: (?:.+:.+\r?\n)(?:\s+at .+\r?\n)+/);
 	});
 
+	it('should have correctly formatted stack with cause when using non error as cause', () => {
+		const cause = { toString: () => 'Fault' };
+		const exception = new Exception('Error', cause);
+		expect(exception.stack?.endsWith('Caused by: Fault')).to.be.true;
+	});
+
 	it('should return correct cause of exception', () => {
 		const cause = new Error('Actual error');
 		const exception = new Exception('Error', cause);
