@@ -48,9 +48,26 @@ Like this:
 import Exception from 'exceptions-with-cause'; // or use require if using commonjs
 
 try {
-  throw new Error('This one this was null when it should not be!');
+  // Something goes wrong in here, for example:
+  JSON.parse(undefined);
 }
 catch (error) {
-  throw new Exception('Could not do the thing because an error occurred', error);
+  throw new Exception('Something descriptive of what the code was doing', error);
 }
+```
+Which will result in this error:
+```
+Exception: Something descriptive of what the code was doing
+    at Object.<anonymous> (/Users/user/project/index.js:8:9)
+Caused by: SyntaxError: Unexpected token u in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Object.<anonymous> (/Users/user/project/index.js:5:8)
+```
+
+### Retrieving the cause
+It is also possible to retrieve the cause object from an exception if needed, like this:
+```js
+const ex = new Exception('Error', { example: 123 });
+
+const cause = Exception.cause(ex); // Will return { example: 123 }
 ```
