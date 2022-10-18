@@ -1,4 +1,4 @@
-[![npm](https://img.shields.io/npm/v/exceptions-with-cause?style=for-the-badge)](https://www.npmjs.com/package/exceptions-with-cause) ![npm type definitions](https://img.shields.io/npm/types/exceptions-with-cause?style=for-the-badge) [![npm bundle size](https://img.shields.io/bundlephobia/min/exceptions-with-cause?style=for-the-badge)](https://bundlephobia.com/package/exceptions-with-cause)
+[![npm](https://img.shields.io/npm/v/exceptions-with-cause?style=for-the-badge)](https://www.npmjs.com/package/exceptions-with-cause) ![npm type definitions](https://img.shields.io/npm/types/exceptions-with-cause?style=for-the-badge) ![npm modules type](https://img.shields.io/badge/modules-hybrid-blue?style=for-the-badge) [![npm bundle size](https://img.shields.io/bundlephobia/min/exceptions-with-cause?style=for-the-badge)](https://bundlephobia.com/package/exceptions-with-cause)
 # `exceptions-with-cause`
 
 ## What?
