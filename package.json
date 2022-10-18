@@ -17,7 +17,8 @@
     "node": ">=12.20.0"
   },
   "files": [
-    "dist"
+    "dist",
+    "LICENSE"
   ],
   "main": "./dist/cjs/index.c.js",
   "module": "./dist/mjs/index.m.js",
