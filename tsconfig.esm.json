@@ -4,5 +4,5 @@
     "module": "ESNext",
     "outDir": "dist/mjs"
   },
-  "exclude": ["src/index.c.ts", "src/**/*.test.*", "node_modules", "dist"]
+  "exclude": ["src/index.cjs.ts", "src/**/*.test.*", "node_modules", "dist"]
 }
