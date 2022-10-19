@@ -42,11 +42,11 @@
     "node": "16.18.0"
   },
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "lint:strict": "eslint . --max-warnings=0",
-    "test": "mocha .",
-    "test:watch": "mocha --watch --reporter min .",
+    "lint": "eslint . --color",
+    "lint:fix": "eslint . --fix --color",
+    "lint:strict": "eslint . --color --max-warnings=0",
+    "test": "mocha --colors .",
+    "test:watch": "mocha --watch --reporter min --colors .",
     "build": "run-p build:*",
     "build:require": "tsc --project tsconfig.commonjs.json",
     "build:modules": "tsc --project tsconfig.esm.json",
