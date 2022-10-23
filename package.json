@@ -29,7 +29,7 @@
   "exports": {
     ".": {
       "import": {
-        "types":"./dist/mjs/index.esm.d.ts",
+        "types": "./dist/mjs/index.esm.d.ts",
         "default": "./dist/mjs/index.esm.js"
       },
       "require": {
